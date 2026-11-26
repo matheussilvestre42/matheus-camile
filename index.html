@@ -143,7 +143,7 @@ dialog button{position:absolute;top:-14px;right:-14px;width:36px;height:36px;bor
   <p class="lede">Um Jedi e uma Sith provando que os opostos se atraem. Toque em uma foto para ampliar.</p>
   <div class="grid" id="grid"></div>
 </main>
-<footer><strong>Luz e sombra em equilíbrio</strong>Matheus & Camile · 18.03.2028</footer>
+<footer><strong>Que a força esteja sempre conosco</strong>Matheus & Camile · 18.03.2028</footer>
 
 <section id="crawl" aria-label="Abertura">
   <button class="btn" id="skip">Pular</button>
@@ -152,7 +152,7 @@ dialog button{position:absolute;top:-14px;right:-14px;width:36px;height:36px;bor
     <h3>A Aliança entre Luz e Sombra</h3>
     <p>Em uma galáxia dividida entre a Luz e a Sombra, um Cavaleiro Jedi e uma Mestra Sith descobriram o que nenhuma profecia previu: os opostos também podem se escolher.</p>
     <p>Depois de muitas missões e risadas, Matheus e Camile selaram sua Aliança e traçaram a rota final para o dia 18 de março de 2028.</p>
-    <p>Agora, com os sabres se aproximando a cada segundo, só resta contar os dias para a cerimônia que trará o equilíbrio de volta à Força…</p>
+    <p>Agora, com as naves se aproximando a cada segundo, só resta contar os dias para a cerimônia que trará o equilíbrio de volta à Força…</p>
   </div>
 </section>
 <div class="toast" id="toast" role="status"></div>
@@ -164,7 +164,7 @@ const CARDS = [
   [3,"Trégua no alto","Roda-gigante, céu aberto"],
   [0,"Pausa entre missões","Fim de tarde, sabres guardados"],
   [4,"A Aliança selada","Noivado: o pacto definitivo"],
-  [1,"Dupla improvável","Jedi e Sith em trânsito"],
+  [1,"Perfeitamente Equilibrado","Jedi e Sith em trânsito"],
   [2,"Viagem noturna","Nave em modo silencioso"]
 ];
 const $ = id => document.getElementById(id), pad = n => String(n).padStart(2,'0');
@@ -188,7 +188,7 @@ const start  = new Date('2026-11-26T00:00:00-03:00').getTime(); // início dos s
 function setPct(v){ $('fl').style.width = v+'%'; $('fr').style.width = v+'%'; $('pct').textContent = v.toFixed(1)+'%'; $('p').setAttribute('aria-valuenow', Math.round(v)); }
 function tick(){
   const diff = target - Date.now();
-  if(diff <= 0){ $('count').outerHTML = '<p class="done">Os sabres se cruzaram. Hoje é o grande dia!</p>'; setPct(100); clearInterval(t); return; }
+  if(diff <= 0){ $('count').outerHTML = '<p class="done">As naves chegam. Hoje é o grande dia!</p>'; setPct(100); clearInterval(t); return; }
   const s = Math.floor(diff/1000);
   $('d').textContent = Math.floor(s/86400); $('h').textContent = pad(Math.floor(s%86400/3600));
   $('m').textContent = pad(Math.floor(s%3600/60)); $('s').textContent = pad(s%60);
